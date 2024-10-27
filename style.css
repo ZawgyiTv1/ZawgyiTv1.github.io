@@ -1,111 +1,132 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Trade+Winds&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Trade+Winds&display=swap');
 
-* {
-  margin: 0;
-  padding: 2px;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  font-family: 'Montserrat';
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Montserrat';
+        }
 
-.app-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 0px solid #8098ff;
-}
+        .match-row {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 0px solid #ddd;
+            padding: 2px;
+            margin: 4px 0;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 6px, rgba(0, 0, 0, 0.3) 0px 7px 13px -8px, rgba(0, 0, 0, 0.3) 0px -4px 0px inset;
+        }
 
-.logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 10px;
-  border: 0px solid #8098ff;
-}
+        .match-row:active,
+        .match-row:focus,
+        .match-row:hover {
+            color: black;
+            font-weight: bold;
+            outline: none;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 6px, rgba(0, 0, 0, 0.3) 0px 7px 13px -8px, rgba(0, 0, 0, 1.0) 0px -4px 0px inset;
+        }
 
-.app-details {
-  margin-left: 5px;
-  width: 100%;
-  border: 0px solid #8098ff;
-}
+        .match-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: red;
+            width: 100%;
+            padding: 4px;
+            border-radius: 10px 10px 0px 0px;
+        }
 
+        .match-left {
+            display: flex;
+            align-items: center;
+            width: 65%;
+        }
 
+        .match-logo {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
 
-.app-metadata,
-.app-metadata-section,
-.metadata-section {
-  font-size: 14px;
-  color: #555;
-  margin-top: 20px;
-  text-align: center;
-}
+        .match-details {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #fff;
+            text-align: left;
+            border: 0px solid #ddd;
+        }
 
-.screenshots-section {
-  margin-top: 20px;
-}
+        .match-time {
+            margin-left: 10px;
+            width: 35%;
+            text-align: right;
+            color: #fff;
+        }
 
-.screenshots-container {
-  display: flex;
-  overflow-x: auto;
-}
+        .match-extra {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+            width: 100%;
+            border: 0px solid #ddd;
+            height: 50px;
+        }
 
-.screenshots-container img {
-  max-width: 100%;
-  margin-right: 10px;
-}
+        .home-team-info, .away-team-info {
+            display: flex;
+            align-items: center;
+            width: 40%;
+            border: 0px solid #ddd;
+        }
 
-.app-description {
-  margin-top: 20px;
-}
+        .home-team-info {
+            justify-content: flex-end;
+        }
 
-.metadata-item,
-.download-section {
-  text-align: center;
-}
+        .home-team-logo, .away-team-logo {
+            width: 35px;
+            height: 35px;
+            margin-right: 5px;
+        }
 
-.metadata-item img {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 5px;
-}
+        .home-team-name {
+            width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: right;
+            margin-right: 5px;
+        }
 
-.download-section {
-  text-align: center;
-}
+        .away-team-name {
+            width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
 
-.download-button {
-  margin: 12px;
-  width: 93%;
-  padding: 10px;
-  font-size: 18px;
-  background-color: #af40ff;
-  color: #fff;
-  border-radius: 20px;
-}
+        .match-score {
+            border: 0px dodgerblue solid;
+            font-size: 14px;
+            width: 10%;
+            font-weight: 700;
+            text-align: center;
+        }
 
-.download-button:hover {
-  margin: 12px;
-  width: 93%;
-  padding: 10px;
-  font-size: 18px;
-  background-color: #ffd5bf;
-  color: #fff;
-  border-radius: 20px;
-}
-
-img.logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 10px;
-  margin-left: 10px;
-}
-
-img {
-  width: 120px;
-  height: 190px;
-  border-radius: 10px;
-}
-
-h1{
-    font-size: 16px;
-}
+        .match-time-info {
+            font-size: 12px;
+            color: gray;
+            width: 10%;
+            padding: 2px;
+            text-align: left;
+            margin-right: 10px;
+            border: 0px dodgerblue solid;
+        }
+ 
