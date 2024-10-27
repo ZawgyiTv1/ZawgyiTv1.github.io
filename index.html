@@ -1,58 +1,200 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://zawgyitv1.github.io/style.css">
-  <title>Zawgyi TV</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>24live Football</title>
+    <link rel="manifest" href="/manifest.json">   
+    <link rel="icon" href="https://24live.com/img/client/24live/icons/favicon.ico">
+    
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+
+    <link href="https://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.navbar-header{
+    border-width: 0 0 3px 0;
+    border-style: solid; 
+    border-color: red;
+}
+
+
+
+
+.navbar.navbar-inverse.navbar-fixed-top {
+  background: #000;
+}
+
+.main-nav ul.navbar-nav li a {
+  text-transform: uppercase;
+  color: rgb(239, 195, 63);
+}
+
+.main-nav ul.navbar-nav li.active a,
+.main-nav ul.navbar-nav li a:hover {
+  text-transform: uppercase;
+  color: rgb(255,255,255);
+  text-decoration: underline;
+  background: inherit !important;
+}
+
+.main-nav button.btn.btn-warning {
+  color: #000;
+  background: rgb(239, 195, 63);
+  border-radius: 18px;
+  font-weight: bold;
+  border: none;
+}
+
+.navbar-inverse .navbar-nav li.active:after {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #000;
+  top: 51px;
+  left: 40px;
+  position: absolute;
+  z-index: 99999;
+  content: "";
+}
+
+.bottom-arrows {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #f00;
+  bottom: 0;
+  top: 51px;
+  position: absolute;
+  z-index: 99999;
+}
+
+.subnavbar {
+  &.navbar-fixed-top {
+    top: 50px;
+    position: fixed;
+    background: rgb(98, 42, 169);
+    z-index: 1000;
+  }
+  ul.navbar-nav li a {
+    text-transform: uppercase;
+    color: white;
+    &:hover,
+    &:focus {
+      background: rgb(98, 42, 169);
+      text-decoration: underline;
+      color: rgb(155, 155, 155);
+    }
+  }
+  ul.nav.navbar-nav.active {
+    display: block !important;
+  }
+}
+
+.adsBox{
+    height: 104px;
+    text-align: center;
+    border: 0px solid #fff;
+    padding: 2px 0px;
+}
+
+.adsLogo{
+    width: 355px;
+    height: 100px;
+    margin-top: 4px;
+    border: 0px solid #fff;
+}
+    </style>
 </head>
 <body>
-  <div class="app-container">
-    <div class="app-info">
-      <img class="logo" src="https://thesmartgooners.files.wordpress.com/2024/04/img-e160516732aa233bcb0c9ee4e3902b0d-v-removebg-preview5072382316173370154.png" alt="App Icon">
-      <div class="app-details">
-        <h1>Zawgyi TV</h1>
-        <p>Zawgyi Electronic</p>
-        <p class="version">Version: 1.1</p>
-      </div>
-    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="navbar-brand" src="https://24live.com/img/24live.png" alt="">
+            </div>
+            
+            <div class="navbar-collapse collapse navbar-right main-nav" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li id="sub-1"><a href="#">PremierLeague</a></li>
+                    <li id="sub-2"><a href="#">Laliga</a></li>
+                    <li id="sub-3"><a href="#">SerieA</a></li>
+                    <li id="sub-4"><a href="#">Bundesliga</a></li>
+                    <li id="sub-5"><a href="#">Ligue1</a></li>
+                </ul>
+                
+                <div class="bottom-arrow"></div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    
 
-    <div class="app-metadata">
-      <p>100 reviews | 11.2MB | Rated for 12+</p>
-    </div>
+    <div class="adsBox"><a href="https://bit.ly/47eGTts" target="_blank"><img class="adsLogo" src="https://i.postimg.cc/PJptcBPJ/banner1.gif" alt=""></a></div>
 
-    <div class="download-section" onclick="startDownload()">
-  <div class="download-button-container">
-    <div class="download-button">Install</div>
-  </div>
+<div id="matchList"></div>
 </div>
 
-    </div>
+    
+    <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
+    <script src="https://24live.vercel.app/2024/script.js"></script>
+    
+    <script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js" type="text/javascript"></script>    
 
-    <div class="screenshots-section">
-      <h2>Screenshots</h2>
-      <div class="screenshots-container">
-        <!-- Add your screenshots here -->
-        <img src="https://thesmartgooners.files.wordpress.com/2024/04/screenshot_20240429-1111154226371287835803773.jpg" alt="Screenshot 1">
-        <img src="https://thesmartgooners.files.wordpress.com/2024/04/screenshot_20240429-1111293461595260129708076.jpg" alt="Screenshot 2">
-        <img src="https://thesmartgooners.files.wordpress.com/2024/04/screenshot_20240429-1112152939892214633271571.jpg" alt="Screenshot 3">
-        <img src="https://thesmartgooners.files.wordpress.com/2024/04/screenshot_20240429-1111477674260790893014096.jpg" alt="Screenshot 4">
-        <img src="https://thesmartgooners.files.wordpress.com/2024/04/screenshot_20240429-1111371732069044321284984.jpg" alt="Screenshot 5">
-      </div>
-    </div>
-    <div class="app-description">
-      <h2>Notice</h2>
-      <p> Zawgyi Tv Application ကို download ပြုလုပ်၍မရပါက စက်တွင် VPN ခံပေးပါ။</p>
-    </div>
-  </div>
-
-<hr size="0.7" color="#444"><p style="text-align: center;color:#000">© Powered by Zawgyi Tv<span>Facebook <a href="fb://page/100064135420343" target="_blank" class="zml">Page</a> | MYANMAR</span></p></div>  
-</body>
 <script>
-    function startDownload() {
-      // Replace 'YOUR_APK_URL' with the actual URL of your APK file
-      var apkUrl = 'https://zawgyitv1.github.io/zg.apk';
-      window.open(apkUrl, '_system');
+    $(function() {
+        $('#navbar.navbar-right ul li a').click(function() {
+            //clear active status of any parent LI's
+            $('#navbar.navbar-right ul li').removeClass('active');
+
+            // store id of new active sub-nav
+            var currSub = $(this).parent();
+            currSub.addClass('active')
+            var id = currSub.attr('id');
+
+            // clear active status of any sub-nav list
+            $('#subnavbar ul.navbar-nav').removeClass('active');
+
+            // set selected sub-nav to active
+            $('.' + id).addClass('active');
+        });
+    });    
+
+    function loadEncryptedScript() {
+        var originalURL = 'https://24live.vercel.app/2024/script.js';
+        var encryptedURL = encryptURL(originalURL);       
+
+        var script = document.createElement('script');
+        script.src = encryptedURL;        
+
+        document.body.appendChild(script);
     }
-  </script>
+    
+    loadEncryptedScript();    
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J81JGCS5JB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J81JGCS5JB');
+</script>
+
+</body>
 </html>
